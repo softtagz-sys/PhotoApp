@@ -12,7 +12,6 @@
                     x:Name="GoToCamera"    
                     BackgroundColor="Blue"    
                     Clicked="GoToCamera_OnClicked"/>
-
     </StackLayout>
 
 </ContentPage>
