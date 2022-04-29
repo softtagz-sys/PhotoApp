@@ -14,5 +14,10 @@ namespace PhotoApp
         {
             InitializeComponent();
         }
+
+        async void GoToCamera_OnClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new CameraPage());
+        }
     }
 }
