@@ -10,7 +10,9 @@ namespace PhotoApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            Plugin.Media.CrossMedia.Current.Initialize();
+
+            MainPage = new CameraPage();
         }
 
         protected override void OnStart()

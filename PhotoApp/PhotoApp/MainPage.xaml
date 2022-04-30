@@ -12,6 +12,10 @@
                     x:Name="GoToCamera"    
                     BackgroundColor="Blue"    
                     Clicked="GoToCamera_OnClicked"/>
+        <Button Text="Go to event page"    
+                    x:Name="GoToEvent"    
+                    BackgroundColor="Blue"    
+                    Clicked="GoToEvent_OnClicked"/>
     </StackLayout>
 
 </ContentPage>
