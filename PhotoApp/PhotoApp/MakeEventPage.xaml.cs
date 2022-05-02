@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace PhotoApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EventPage : ContentPage
+    public partial class MakeEventPage : ContentPage
     {
-        public EventPage()
+        public MakeEventPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            
         }
     }
 }
