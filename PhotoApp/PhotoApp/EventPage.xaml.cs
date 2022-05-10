@@ -17,16 +17,9 @@ namespace PhotoApp
             InitializeComponent();
         }
 
-        async void Button_Clicked(object sender, EventArgs e)
+        async void btnMakeEvent_Clicked(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new NavigationPage(new MakeEventPage()));
         }
-
-        public IObservable<Album> MyImages { get; set; }
-    }
-    public class Album
-    {
-        public string Image { get; set; }
-        public string Description { get; set; }
     }
 }

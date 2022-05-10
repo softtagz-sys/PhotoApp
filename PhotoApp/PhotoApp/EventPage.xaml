@@ -4,15 +4,18 @@
              x:Class="PhotoApp.EventPage"
              Title="Jouw events">
     <Grid>
-        <CarouselView ItemsSource="{Binding MyImages}" Margin="20">
-            <CarouselView.EmptyView>
-                <Grid>
-                    <Label Text="Dit is een tryout voor een plusbutton" HorizontalOptions="Center" VerticalOptions="Center"/>
-                </Grid>
-            </CarouselView.EmptyView>
-        </CarouselView>
-        <pv:pancakeview HorizontalOptions="End" VerticalOptions="End" Margin="30" CornerRadius="40" Padding="15">
-            
-        </pv:pancakeview>
+        <Grid Padding="10,20,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btnMakeEvent"
+                    Text="Plus button"
+                    Clicked="btnMakeEvent_Clicked"
+                    Grid.Row="1"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"/>
+        </Grid>
     </Grid>
 </ContentPage>

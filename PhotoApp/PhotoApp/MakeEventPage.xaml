@@ -21,13 +21,15 @@
         <Entry Grid.Row="1" Grid.ColumnSpan="2"  Placeholder="Naam" x:Name="t_EventNaam"/>
 
         <Label Grid.Row="2" Grid.ColumnSpan="2" Text="Begin:" FontSize="15" x:Name="lblBegin"/>
-        <Entry Grid.Row="2" Grid.ColumnSpan="2" Placeholder="/ /" x:Name="t_BeginDatum" />
-        <Entry Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Begintijd" x:Name="t_BeginTijd"/>
+        <DatePicker Grid.Row="2" Grid.ColumnSpan="2" x:Name="dtpBeginDatum" Format="D" Margin="30, 0, 0, 30" DateSelected="dtpBeginDatum_DateSelected"/>
+        <TimePicker Grid.Row="3" Grid.ColumnSpan="2" x:Name="tpBeginTijd" Format="T" PropertyChanged="tpBeginTijd_PropertyChanged"/>
 
         <Label Grid.Row="4" Grid.ColumnSpan="2" Text="Einde:" FontSize="15" x:Name="lblEinde"/>
-        <Entry Grid.Row="4" Grid.ColumnSpan="2" Placeholder="/ /" x:Name="t_EindDatum"/>
-        <Entry Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Eindtijd" x:Name="t_EindTijd"/>
+        <DatePicker Grid.Row="4" Grid.ColumnSpan="2" x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D" Margin="30, 0, 0, 30" DateSelected="dtpEindDatum_DateSelected"/>
+        <TimePicker Grid.Row="5" Grid.ColumnSpan="2" x:Name="tpEindTijd" Format="T" PropertyChanged="tpEindTijd_PropertyChanged"/>
 
-        <Button Grid.Row="6" Grid.ColumnSpan="2" Text="Maak event aan" x:Name="btnEventMaken" Clicked="btnEventMaken_Clicked"/>
+        <Label Grid.Row="6" Grid.ColumnSpan="2" x:Name="lblCode" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        <Button Grid.Row="7" Grid.ColumnSpan="2" Text="Maak event aan" x:Name="btnEventMaken" Clicked="btnEventMaken_Clicked"/>
     </Grid>
 </ContentPage>
