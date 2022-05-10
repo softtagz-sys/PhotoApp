@@ -12,7 +12,7 @@ namespace PhotoApp
 
             Plugin.Media.CrossMedia.Current.Initialize();
 
-            MainPage = new MakeEventPage();
+            MainPage = new EventPage();
         }
 
         protected override void OnStart()
