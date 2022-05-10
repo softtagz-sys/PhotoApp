@@ -17,17 +17,17 @@
             <Label Text="Make your account here!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
-        <Label Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Start" Text="Info:" FontSize="15" Margin="10"/>
+        <Label Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Start" Text="Info:" FontSize="15" Margin="10" x:Name="lblInfo"/>
         <Entry Grid.Row="1" Grid.ColumnSpan="2"  Placeholder="Naam" x:Name="t_EventNaam"/>
 
-        <Label Grid.Row="2" Grid.ColumnSpan="2" Text="Begin:" FontSize="15"/>
+        <Label Grid.Row="2" Grid.ColumnSpan="2" Text="Begin:" FontSize="15" x:Name="lblBegin"/>
         <Entry Grid.Row="2" Grid.ColumnSpan="2" Placeholder="/ /" x:Name="t_BeginDatum" />
         <Entry Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Begintijd" x:Name="t_BeginTijd"/>
 
-        <Label Grid.Row="4" Grid.ColumnSpan="2" Text="Einde:" FontSize="15"/>
+        <Label Grid.Row="4" Grid.ColumnSpan="2" Text="Einde:" FontSize="15" x:Name="lblEinde"/>
         <Entry Grid.Row="4" Grid.ColumnSpan="2" Placeholder="/ /" x:Name="t_EindDatum"/>
         <Entry Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Eindtijd" x:Name="t_EindTijd"/>
 
-        <Button Grid.Row="6" Grid.ColumnSpan="2" Text="Maak event aan" x:Name="B_EventAanmaken" Clicked="B_EventAanmaken_Clicked" VerticalOptions="End"/>
+        <Button Grid.Row="6" Grid.ColumnSpan="2" Text="Maak event aan" x:Name="btnEventMaken" Clicked="btnEventMaken_Clicked"/>
     </Grid>
 </ContentPage>

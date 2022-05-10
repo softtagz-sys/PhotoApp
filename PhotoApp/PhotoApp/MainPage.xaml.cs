@@ -13,6 +13,7 @@ namespace PhotoApp
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = this;
         }
 
         async void GoToCamera_OnClicked(object sender, EventArgs args)
@@ -23,5 +24,6 @@ namespace PhotoApp
         {
             await Navigation.PushAsync(new NavigationPage(new EventPage()));
         }
+
     }
 }

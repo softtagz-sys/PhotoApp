@@ -9,9 +9,8 @@ namespace PhotoApp
         public App()
         {
             InitializeComponent();
-
+            Device.SetFlags(new[] { "Expander_Experimental" });
             Plugin.Media.CrossMedia.Current.Initialize();
-
             MainPage = new EventPage();
         }
 
