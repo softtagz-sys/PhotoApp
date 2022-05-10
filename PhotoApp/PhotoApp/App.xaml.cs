@@ -11,7 +11,7 @@ namespace PhotoApp
             InitializeComponent();
             Device.SetFlags(new[] { "Expander_Experimental" });
             Plugin.Media.CrossMedia.Current.Initialize();
-            MainPage = new EventPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
