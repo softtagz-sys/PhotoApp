@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Net;
+using System.IO;
 
 namespace PhotoApp
 {
@@ -20,6 +22,11 @@ namespace PhotoApp
         }
         async void TakePhoto_Clicked(object sender, System.EventArgs e)
         {
+            string fileName = Guid.NewGuid().ToString();
+            string eventName = "kobes_event2";
+            string remotePath = $"ftp://nasha.no-ip.org:5005/PhotoApp/{eventName}";
+            string ftpUsername = "EventShootOutAppKey";
+            string ftpPass = "n9thiK9mlg4we94lp9Ti";
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
                 await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
@@ -28,7 +35,7 @@ namespace PhotoApp
             var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 Directory = "Sample",
-                Name = Guid.NewGuid().ToString()
+                Name = fileName
             });
             if (file == null)
                 return;
@@ -36,10 +43,15 @@ namespace PhotoApp
             image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
-                file.Dispose();
                 return stream;
             });
+            using (var client = new WebClient())
+            {
+                client.Credentials = new NetworkCredential(ftpUsername, ftpPass);
+                client.UploadFile($"{remotePath}/{fileName}.jpg", WebRequestMethods.Ftp.UploadFile, file.Path);
+                File.Delete(file.Path);
+                file.Dispose();
+            }
         }
-
     }
 }
