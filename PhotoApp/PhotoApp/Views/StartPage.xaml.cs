@@ -30,7 +30,7 @@ namespace PhotoApp
 
             string SixDigitCode = rndCode.Next(0, 1000000).ToString("D6");
 
-            lblCode.Text = SixDigitCode;
+            //lblCode.Text = SixDigitCode;
         }
 
         private void dtpBeginDatum_DateSelected(object sender, DateChangedEventArgs e)

@@ -24,10 +24,10 @@ namespace PhotoApp
             User u = new User
                 (
                     0,
-                    "stef@gmail.com",
+                    "Brend@hotmail.com",
                     false
                 );
-            u.setPassword("worstenkoning");
+            u.setPassword("mama");
             int r = db.createUser(u);
         }
     }

@@ -9,7 +9,7 @@
         <Entry Placeholder="Naam" x:Name="t_EventNaam"/>
 
         <Label Text="Begin:" FontSize="15" x:Name="lblBegin"/>
-        <DatePicker x:Name="dtpBeginDatum" Format="D" Margin="30, 0, 0, 30" DateSelected="dtpBeginDatum_DateSelected"/>
+        <DatePicker x:Name="dtpBeginDatum" Format="D" Margin="30, 0, 0, 30" DateSelected="dtpBeginDatum_DateSelected"/>        
         <TimePicker x:Name="tpBeginTijd" Format="T" PropertyChanged="tpBeginTijd_PropertyChanged"/>
 
         <Label Text="Einde:" FontSize="15" x:Name="lblEinde"/>
