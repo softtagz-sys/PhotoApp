@@ -7,7 +7,9 @@ namespace PhotoApp
 {
     internal class DBconnector
     {
-        private static string host = "84.198.150.18";
+        private static string host = "10.23.0.228";
+        // OpSchool: "10.23.0.228"
+        // Thuis: "84.198.150.18"
         private static string database = "fotoapp";
         private static string userDB = "fotoapp_usr";
         private static string password = "JDMM6sYm";
@@ -72,7 +74,6 @@ namespace PhotoApp
             connection.Close();
 
             return users;
-
         }
     }
 }

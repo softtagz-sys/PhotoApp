@@ -26,7 +26,16 @@ namespace PhotoApp
             {
                 if (EntryEmail != null && EntryPassword != null)
                 {
-                  
+                    DBconnector db = new DBconnector();
+
+                    User u = new User
+                        (
+                            0,
+                            EntryEmail.Text,
+                            false
+                        );
+                    u.setPassword(EntryPassword.Text);
+                    int r = db.createUser(u);
                 }    
             }
             catch (Exception)
