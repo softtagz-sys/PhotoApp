@@ -10,12 +10,10 @@
                 <RowDefinition/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Button x:Name="btnMakeEvent"
-                    Text="Plus button"
-                    Clicked="btnMakeEvent_Clicked"
-                    Grid.Row="1"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
         </Grid>
     </Grid>
 </ContentPage>
