@@ -24,6 +24,5 @@ namespace PhotoApp
         {
             await Navigation.PushModalAsync(new NavigationPage(new EventPage()));
         }
-
     }
 }

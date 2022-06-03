@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhotoApp.StartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Welcome to our photo app" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <Grid>
+                <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                </Grid.ColumnDefinitions>                
+            </Grid>
+            
+            <Entry Grid.Row="0" Grid.Column="1" x:Name="Code1" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+            <Entry Grid.Row="0" Grid.Column="2" x:Name="Code2" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+            <Entry Grid.Row="0" Grid.Column="3" x:Name="Code3" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+            <Entry Grid.Row="0" Grid.Column="4" x:Name="Code4" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+            <Entry Grid.Row="0" Grid.Column="5" x:Name="Code5" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+            <Entry Grid.Row="0" Grid.Column="6" x:Name="Code6" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+            <Button x:Name="BtnConnectToEvent" Text="verbind met event" Clicked="BtnConnectToEvent_Clicked" />
+
+            <Button x:Name="btnLogIn" Text="Aanmelden als host" Clicked="btnLogIn_OnClicked"/>
+            <Label Text="of" FontSize="Small" HorizontalTextAlignment="Center"/>
+            <Button x:Name="BtnRegistreren" Text="Maak een host account aan" Clicked="BtnRegister_OnClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
