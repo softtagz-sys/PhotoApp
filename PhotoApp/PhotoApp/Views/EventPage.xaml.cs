@@ -14,7 +14,18 @@ namespace PhotoApp
     {
         public EventPage()
         {
-            Button btnOverview = new Button
+            DBconnector db = new DBconnector();
+            List<Event> events = db.listEventsForUser(user);
+
+
+
+            for (int i = 0; i < events.Count; i++)
+            {
+
+            }
+
+
+            Button button = new Button
             {
                 Text = "Communie",
                 Margin=10,
@@ -23,7 +34,7 @@ namespace PhotoApp
                 WidthRequest=100,
                 HeightRequest=200
             };
-            btnOverview.Clicked += BtnOverview_Clicked;
+            button.Clicked += BtnOverview_Clicked;
 
             ImageButton ImgBtnMakeEvent = new ImageButton
             {
@@ -40,7 +51,7 @@ namespace PhotoApp
             {
                 Children =
                 {
-                    btnOverview, ImgBtnMakeEvent
+                    ImgBtnMakeEvent
                 }
             };
         }

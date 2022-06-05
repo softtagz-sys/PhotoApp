@@ -14,6 +14,8 @@ namespace PhotoApp
             MainPage = new NavigationPage(new LoginPage());
         }
 
+        public static User _user { get; set; }
+
         protected override void OnStart()
         {
         }
