@@ -1,6 +1,7 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace PhotoApp
@@ -77,7 +78,7 @@ namespace PhotoApp
         }
 
         public List<Event> listEventsForUser(User user){
-            List<Event> list =list new List<Event>();
+            List<Event> list = new List<Event>();
             list.Add(new Event(
                 1, 1, "Dummy 1", 
                 DateTime.Parse("12 Juni 2022 20:00", new CultureInfo("nl-BE")), 

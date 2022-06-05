@@ -21,14 +21,7 @@ namespace PhotoApp
         {
             DBconnector db = new DBconnector();
 
-            User u = new User
-                (
-                    0,
-                    "Brend@hotmail.com",
-                    false
-                );
-            u.setPassword("mama");
-            int r = db.createUser(u);
+            
         }
     }
 }

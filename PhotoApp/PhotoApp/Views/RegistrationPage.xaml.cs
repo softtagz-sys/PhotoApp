@@ -11,10 +11,7 @@ namespace PhotoApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistrationPage : ContentPage
-    {
-        string strEmail, strPassword;
-        bool blIsHost;
-        
+    {        
         public RegistrationPage()
         {
             InitializeComponent();
