@@ -12,9 +12,14 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EventGallery : ContentPage
     {
-        public EventGallery()
+        private User user = null;
+        private Event item = null;
+        public EventGallery(Object user, Object item)
         {
             InitializeComponent();
+            this.user = (User)user;
+            this.item = (Event)item;
+
         }
     }
 }
