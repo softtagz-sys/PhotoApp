@@ -6,6 +6,7 @@ namespace PhotoApp
 {
     public partial class App : Application
     {
+        public static string AppUserName { get; set; }
         public App()
         {
             InitializeComponent();
@@ -13,7 +14,8 @@ namespace PhotoApp
             Plugin.Media.CrossMedia.Current.Initialize();
             MainPage = new NavigationPage(new StartPage());
         }
-        
+
+
         protected override void OnStart()
         {
         }

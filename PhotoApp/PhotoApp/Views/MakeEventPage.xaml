@@ -5,15 +5,15 @@
              Title="Maak een nieuw event aan">
     <StackLayout Margin="10">
 
-        <Label VerticalOptions="Start" Text="Info:" FontSize="15" Margin="10" x:Name="lblInfo"/>
-        <Entry Placeholder="Naam" x:Name="t_EventNaam"/>
+        <Label VerticalOptions="Start" Text="Info:" FontSize="15" x:Name="lblInfo"/>
+        <Entry Placeholder="Naam" x:Name="entryEventNaam"/>
 
         <Label Text="Begin:" FontSize="15" x:Name="lblBegin"/>
-        <DatePicker x:Name="dtpBeginDatum" Format="D" Margin="30, 0, 0, 30" DateSelected="dtpBeginDatum_DateSelected"/>        
+        <DatePicker x:Name="dtpBeginDatum" Format="D" DateSelected="dtpBeginDatum_DateSelected"/>        
         <TimePicker x:Name="tpBeginTijd" Format="T" PropertyChanged="tpBeginTijd_PropertyChanged"/>
 
         <Label Text="Einde:" FontSize="15" x:Name="lblEinde"/>
-        <DatePicker x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D" Margin="30, 0, 0, 30" DateSelected="dtpEindDatum_DateSelected"/>
+        <DatePicker x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D" DateSelected="dtpEindDatum_DateSelected"/>
         <TimePicker x:Name="tpEindTijd" Format="T" PropertyChanged="tpEindTijd_PropertyChanged"/>
 
         <Label Text="Code voor je event!" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center"/>
