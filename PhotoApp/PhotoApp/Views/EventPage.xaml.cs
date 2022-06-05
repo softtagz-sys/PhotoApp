@@ -14,56 +14,33 @@ namespace PhotoApp
     {
         public EventPage()
         {
+            InitializeComponent();
             DBconnector db = new DBconnector();
-            List<Event> events = db.listEventsForUser(user);
+            List<Event> events = db.listEventsForUser(new User((ulong)1, "jan@telenet.be", true));
 
 
-
-            for (int i = 0; i < events.Count; i++)
+            EventButtons.Children.Clear();
+            foreach (Event item in events)
             {
-
-            }
-
-
-            Button button = new Button
-            {
-                Text = "Communie",
-                Margin=10,
-                HorizontalOptions = LayoutOptions.Start,
-                VerticalOptions = LayoutOptions.Start,
-                WidthRequest=100,
-                HeightRequest=200
-            };
-            button.Clicked += BtnOverview_Clicked;
-
-            ImageButton ImgBtnMakeEvent = new ImageButton
-            {
-                Source = "PlusButton.png",
-                Margin=10,
-                HorizontalOptions = LayoutOptions.Start,
-                VerticalOptions = LayoutOptions.End,
-                WidthRequest = 50,
-                HeightRequest = 100
-            };
-            ImgBtnMakeEvent.Clicked += ImgBtnMakeEvent_Clicked1;
-
-            Content = new Grid
-            {
-                Children =
+                var btn = new Button()
                 {
-                    ImgBtnMakeEvent
-                }
-            };
+                    Text = item.getName()
+                    };
+                btn.Clicked += OnEventBtnClicked;
+                EventButtons.Children.Add(btn);
+            }
+        }
+
+        private void OnEventBtnClicked(object sender, EventArgs e)
+        {
+            var myBtn = sender as Button;
+            
+
         }
 
         async void ImgBtnMakeEvent_Clicked1(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new MakeEventPage()));
-        }
-
-        private void BtnOverview_Clicked(object sender, EventArgs e)
-        {
-            
         }
     }
 }

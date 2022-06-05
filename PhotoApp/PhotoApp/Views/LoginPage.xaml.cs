@@ -21,6 +21,14 @@ namespace PhotoApp
         {
             DBconnector db = new DBconnector();
 
+            if (db.isValidUser(entryEmail.Text, entryPassword.Text))
+            {
+
+            }
+            else
+            {
+
+            }
             
         }
     }

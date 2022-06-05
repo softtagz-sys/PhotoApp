@@ -6,15 +6,15 @@ namespace PhotoApp
 {
     public partial class App : Application
     {
+        public static string AppUserName { get; set; }
         public App()
         {
             InitializeComponent();
             Device.SetFlags(new[] { "Expander_Experimental" });
             Plugin.Media.CrossMedia.Current.Initialize();
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new EventPage());
         }
 
-        public static User _user { get; set; }
 
         protected override void OnStart()
         {
