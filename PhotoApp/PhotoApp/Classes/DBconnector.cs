@@ -8,7 +8,7 @@ namespace PhotoApp
 {
     internal class DBconnector
     {
-        private static string host = "10.23.0.228";
+        private static string host = "84.198.150.18";
         // OpSchool: "10.23.0.228"
         // Thuis: "84.198.150.18"
         private static string database = "fotoapp";

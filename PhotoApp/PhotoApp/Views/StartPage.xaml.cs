@@ -22,15 +22,10 @@ namespace PhotoApp
         }
         void btnLogIn_OnClicked(object sender, EventArgs e)
         {
-
+            App.Current.MainPage = new LoginPage();
         }
         void BtnRegister_OnClicked(object sender, EventArgs e)
         {
-            Random rndCode = new Random();
-
-            string SixDigitCode = rndCode.Next(0, 1000000).ToString("D6");
-
-            //lblCode.Text = SixDigitCode;
         }
 
         private void dtpBeginDatum_DateSelected(object sender, DateChangedEventArgs e)

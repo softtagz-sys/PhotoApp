@@ -10,10 +10,12 @@ namespace PhotoApp
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        User user = null;
+        public MainPage(Object user)
         {
             InitializeComponent();
             this.BindingContext = this;
+            this.user = (User)user;
         }
 
         async void GoToCamera_OnClicked(object sender, EventArgs args)
@@ -22,7 +24,7 @@ namespace PhotoApp
         }
         async void GoToEvent_OnClicked(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new EventPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new EventPage(this.user)));
         }
     }
 }

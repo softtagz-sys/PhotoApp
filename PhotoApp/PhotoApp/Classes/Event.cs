@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySqlConnector;
+using PhotoApp.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -47,6 +49,11 @@ namespace PhotoApp
         public string getName()
         {
             return this.eventName;
+        }
+
+        public ulong getId()
+        { 
+            return this.id;
         }
     }
 }

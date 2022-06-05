@@ -17,10 +17,25 @@ namespace PhotoApp
         {
             InitializeComponent();
         }
-        private void btnLogin_Clicked(object sender, EventArgs e)
+        async void btnLogin_Clicked(object sender, EventArgs e)
         {
-            DBconnector db = new DBconnector();
-
+            if (entryEmail.Text != null && entryPassword.Text != null)
+            {
+                DBconnector db = new DBconnector();
+                User user = db.getUserbyUsername(entryEmail.Text, entryPassword.Text);
+                if (user != null)
+                {
+                    App.Current.MainPage = new EventPage(user);
+                }
+                else
+                {
+                    await DisplayAlert("Alert", "User details incorrect", "OK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Alert", "Please provide username and password", "OK");
+            }
             
         }
     }

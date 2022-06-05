@@ -12,12 +12,10 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EventPage : ContentPage
     {
-        public EventPage()
+        public EventPage(Object user)
         {
             DBconnector db = new DBconnector();
-            List<Event> events = db.listEventsForUser(user);
-
-
+            List<Event> events = db.listEventsForUser((User)user);
 
             for (int i = 0; i < events.Count; i++)
             {
