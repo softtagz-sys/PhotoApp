@@ -38,7 +38,7 @@ namespace PhotoApp
 
         }
 
-        async void ImgBtnMakeEvent_Clicked1(object sender, EventArgs e)
+        async void BtnMakeEvent_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new MakeEventPage()));
         }

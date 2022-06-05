@@ -11,8 +11,8 @@
         <ScrollView Grid.Row="0">
             <StackLayout x:Name="EventButtons"/>
         </ScrollView>
-        
-        <Button Grid.Row="0" Text="Maak Event" BorderColor="White" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#2196F3" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,20,22" VerticalOptions="End"/>
+
+        <Button Grid.Row="0" Text="Maak Event" BorderColor="White" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#2196F3" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,20,22" VerticalOptions="End" Clicked="BtnMakeEvent_Clicked"/>
 
     </Grid>
     
