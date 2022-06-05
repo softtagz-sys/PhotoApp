@@ -13,10 +13,10 @@ namespace PhotoApp
     public partial class EventPage : ContentPage
     {
         User user = null;
-        public EventPage(object user)
+        public EventPage(Object user)
         {
-            InitializeComponent();
             this.user = (User)user;
+            InitializeComponent();
             DBconnector db = new DBconnector();
             List<Event> events = db.listEventsForUser(this.user);
 
@@ -27,17 +27,13 @@ namespace PhotoApp
                 var btn = new Button()
                 {
                     Text = item.getName()
-                    };
-                btn.Clicked += OnEventBtnClicked;
+                };
+               
+                btn.Clicked += async delegate { 
+                    await Navigation.PushAsync(new NavigationPage(new EventGallery(this.user, item))); 
+                };
                 EventButtons.Children.Add(btn);
             }
-        }
-
-        private async void OnEventBtnClicked(object sender, EventArgs e)
-        {
-            var myBtn = sender as Button;
-
-            await Navigation.PushAsync(new NavigationPage(new EventGallery()));
         }
 
         async void BtnMakeEvent_Clicked(object sender, EventArgs e)
