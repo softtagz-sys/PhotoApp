@@ -12,11 +12,13 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EventPage : ContentPage
     {
-        public EventPage()
+        User user = null;
+        public EventPage(object User)
         {
             InitializeComponent();
+            this.user = (User)user;
             DBconnector db = new DBconnector();
-            List<Event> events = db.listEventsForUser(new User((ulong)1, "jan@telenet.be", true));
+            List<Event> events = db.listEventsForUser(this.user);
 
 
             EventButtons.Children.Clear();
@@ -31,11 +33,11 @@ namespace PhotoApp
             }
         }
 
-        private void OnEventBtnClicked(object sender, EventArgs e)
+        private async void OnEventBtnClicked(object sender, EventArgs e)
         {
             var myBtn = sender as Button;
-            
 
+            await Navigation.PushAsync(new NavigationPage(new EventGallery()));
         }
 
         async void BtnMakeEvent_Clicked(object sender, EventArgs e)
