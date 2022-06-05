@@ -6,7 +6,6 @@ namespace PhotoApp
 {
     public partial class App : Application
     {
-        public static string AppUserName { get; set; }
         public App()
         {
             InitializeComponent();
