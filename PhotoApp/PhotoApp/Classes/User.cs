@@ -1,11 +1,12 @@
 ﻿using MySqlConnector;
+using PhotoApp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace PhotoApp
 {
-    internal class User
+    internal class User : IDBConnectorInterface
     {
         private ulong id;
         private string email;
@@ -20,7 +21,7 @@ namespace PhotoApp
             this.password = "***secret***";
             this.isHost = isHost;
         }
-        public User (MySqlDataReader reader)
+        public User(MySqlDataReader reader)
         {
             this.id = reader.GetUInt64("id_account");
             this.email = reader.GetString("email");
@@ -32,13 +33,13 @@ namespace PhotoApp
             this.password = password;
         }
 
-        public string getMySqlColumns()
+        public string getMySQLColumns()
         {
             return "email,password,IsHost";
         }
         public string getMySQLValues()
         {
-            return @$"'{this.email}','{this.password}',{(this.isHost?"1":"0")}";
+            return @$"'{this.email}','{this.password}',{(this.isHost ? "1" : "0")}";
         }
 
     }
