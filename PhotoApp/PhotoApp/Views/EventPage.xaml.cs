@@ -13,7 +13,7 @@ namespace PhotoApp
     public partial class EventPage : ContentPage
     {
         User user = null;
-        public EventPage(object User)
+        public EventPage(object user)
         {
             InitializeComponent();
             this.user = (User)user;
@@ -42,7 +42,8 @@ namespace PhotoApp
 
         async void BtnMakeEvent_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new MakeEventPage()));
+            //await Navigation.PushModalAsync(new NavigationPage(new MakeEventPage(this.user)));
+            App.Current.MainPage = new MakeEventPage(user);
         }
     }
 }

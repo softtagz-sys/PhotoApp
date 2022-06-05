@@ -28,6 +28,10 @@ namespace PhotoApp
             this.isHost = (reader.GetInt32("IsHost") == 0 ? false : true);
         }
 
+        public ulong getId()
+        {
+            return this.id;
+        }
         public void setPassword(string password)
         {
             this.password = password;

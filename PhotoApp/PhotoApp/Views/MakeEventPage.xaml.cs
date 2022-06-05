@@ -13,20 +13,39 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MakeEventPage : ContentPage
     {
-        public MakeEventPage()
+        private User user = null;
+        public MakeEventPage(Object user)
         {
             InitializeComponent();
+
+            this.user = (User)user;
         }
 
         private void btnEventMaken_Clicked(object sender, EventArgs e)
         {
             Random rndCode = new Random();
-            string strCode = rndCode.Next(0, 1000000).ToString("D6");
+            ulong strCode = (ulong)rndCode.Next(0, 1000000);
+            string eventName = entryEventNaam.Text;
+            DateTime startDate = dtpBeginDatum.Date;
+            DateTime endDate = dtpEindDatum.Date;
 
-            lblCode.Text = strCode;
+            //TODO missing time component
 
-            string eventName = "kobes_event2";
-            string remotePath = $"ftp://nasha.no-ip.org:5005/PhotoApp/{eventName}";
+            this.createDBEvent(strCode, startDate, endDate, eventName);
+            this.createFTPEvent(strCode.ToString("D3"));
+
+            App.Current.MainPage = new EventPage(user);
+        }
+
+        private void createDBEvent(ulong strCode, DateTime startDate, DateTime endDate, string eventName)
+        {
+            DBconnector db = new DBconnector();
+            db.createEvent(new Event(0, user.getId(), strCode, startDate, endDate, eventName));
+        }
+        private void createFTPEvent(string strCode)
+        {
+            string remotePath = $"ftp://nasha.no-ip.org:5005/PhotoApp/{strCode}";
+
             string ftpUsername = "EventShootOutAppKey";
             string ftpPass = "n9thiK9mlg4we94lp9Ti";
             try
@@ -57,6 +76,8 @@ namespace PhotoApp
                 }
             }
         }
+
+
 
         private void dtpBeginDatum_DateSelected(object sender, DateChangedEventArgs e)
         {

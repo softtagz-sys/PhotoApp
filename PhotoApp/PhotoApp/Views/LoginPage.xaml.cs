@@ -38,5 +38,11 @@ namespace PhotoApp
             }
             
         }
+        async void btnLoginTest_Clicked(object sender, EventArgs e)
+        {
+            DBconnector db = new DBconnector();
+            User user = db.getUserbyUsername("test@test.be", "test");
+            App.Current.MainPage = new EventPage(user);
+        }
     }
 }

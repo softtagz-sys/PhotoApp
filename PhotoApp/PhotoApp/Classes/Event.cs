@@ -11,12 +11,12 @@ namespace PhotoApp
     {
         private ulong id;
         private ulong id_account;
-        private string eventCode;
+        private ulong eventCode;
         private DateTime startDate;
         private DateTime endDate;
         private string eventName;
 
-        public Event(ulong id, ulong id_account, string eventCode, DateTime startDate, DateTime endDate, string eventName)
+        public Event(ulong id, ulong id_account, ulong eventCode, DateTime startDate, DateTime endDate, string eventName)
         {
             this.id = id;
             this.id_account = id_account;
@@ -29,10 +29,10 @@ namespace PhotoApp
         public Event(MySqlDataReader reader)
         {
             this.id = reader.GetUInt64("id_Event");
-            this.id = reader.GetUInt64("id_account");
-            this.eventCode = reader.GetString("EventCode");
-            this.startDate = new DateTime();
-            this.endDate = new DateTime();
+            this.id_account = reader.GetUInt64("id_account");
+            this.eventCode = reader.GetUInt64("EventCode");
+            this.startDate = reader.GetDateTime("StartDate");
+            this.endDate = reader.GetDateTime("EndDate");
             this.eventName = reader.GetString("eventName");
         }
 
@@ -43,7 +43,8 @@ namespace PhotoApp
 
         public string getMySQLValues()
         {
-            return @$"'{this.id_account}','{this.eventCode}','{this.startDate.ToString("u", CultureInfo.GetCultureInfo("nl-BE"))}','{this.endDate.ToString("u", CultureInfo.GetCultureInfo("nl-BE"))}','{this.eventName}'";
+            string timeFormat = "yyyy-mm-dd HH:mm:ss";
+            return @$"'{this.id_account}','{this.eventCode}','{this.startDate.ToString(timeFormat)}','{this.endDate.ToString(timeFormat)}','{this.eventName}'";
         }
 
         public string getName()

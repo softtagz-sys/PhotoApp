@@ -23,6 +23,8 @@
                     </StackLayout>
                     <StackLayout Grid.Row="2">
                         <Button Text="Login" HorizontalOptions="CenterAndExpand" WidthRequest="200" TextColor="White" BackgroundColor="#2196F3" Clicked="btnLogin_Clicked"/>
+
+                        <Button Text="Login TEST" HorizontalOptions="CenterAndExpand" WidthRequest="200" TextColor="White" BackgroundColor="#FF0000" Clicked="btnLoginTest_Clicked"/>
                     </StackLayout>
 
                 </Grid>
