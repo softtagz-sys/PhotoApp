@@ -45,5 +45,10 @@ namespace PhotoApp
         {
             return @$"'{this.id_account}','{this.eventCode}','{this.startDate.ToString("u", CultureInfo.GetCultureInfo("nl-BE"))}','{this.endDate.ToString("u", CultureInfo.GetCultureInfo("nl-BE"))}','{this.eventName}'";
         }
+
+        public string getName()
+        {
+            return this.eventName;
+        }
     }
 }
