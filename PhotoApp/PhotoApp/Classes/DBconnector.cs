@@ -75,5 +75,22 @@ namespace PhotoApp
 
             return users;
         }
+
+        public List<Event> listEventsForUser(User user){
+            List<Event> list =list new List<Event>();
+            list.Add(new Event(
+                1, 1, "Dummy 1", 
+                DateTime.Parse("12 Juni 2022 20:00", new CultureInfo("nl-BE")), 
+                DateTime.Parse("12 Juni 2022 22:00", new CultureInfo("nl-BE"))
+            ));
+            list.Add(new Event(
+                1, 1, "Dummy 2", 
+                DateTime.Parse("13 Juni 2022 21:00", new CultureInfo("nl-BE")), 
+                DateTime.Parse("13 Juni 2022 23:00", new CultureInfo("nl-BE"))
+            ));
+
+            return list;
+        }
+
     }
 }
