@@ -48,14 +48,9 @@ namespace PhotoApp
             return @$"'{this.id_account}','{this.eventCode}','{this.startDate.ToString(timeFormat)}','{this.endDate.ToString(timeFormat)}','{this.eventName}'";
         }
 
-        public string getName()
-        {
-            return this.eventName;
-        }
-
-        public ulong getId()
-        { 
-            return this.id;
-        }
+        public string getName() { return this.eventName; }
+        public ulong getId() { return this.id; }
+        public DateTime getStartDate() { return this.startDate; }
+        public DateTime getEndDate() { return this.endDate; }
     }
 }
