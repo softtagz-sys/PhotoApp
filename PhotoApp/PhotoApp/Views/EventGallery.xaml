@@ -9,7 +9,7 @@
             <Label Text="" x:Name="lblStartDate" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#2196F3" FontSize="16"/>
             <Label Text="" x:Name="lblEndDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
         </StackLayout>
-        <Label Text="" x:Name="lblEventStatus" BackgroundColor="Gray"/>
+        <Label Text="" x:Name="lblEventStatus" HorizontalTextAlignment="Center" BackgroundColor="LightGray"/>
 
         <Grid>
             <Grid.RowDefinitions>

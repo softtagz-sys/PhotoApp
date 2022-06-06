@@ -42,7 +42,7 @@ namespace PhotoApp
             }
             else if (this.item.IsEventUngoing())
             {
-                lblEventStatus.Text = "This event is ungoing";
+                lblEventStatus.Text = "This event is ongoing";
             }
         }
 
