@@ -20,6 +20,8 @@ namespace PhotoApp
             this.user = (User)user;
             this.item = (Event)item;
 
+            await DisplayAlert("user", this.user.getEmail , "OK");
+            await DisplayAlert("event", this.item.getName , "OK");
         }
     }
 }
