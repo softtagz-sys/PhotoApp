@@ -34,6 +34,7 @@ namespace PhotoApp
             this.startDate = reader.GetDateTime("StartDate");
             this.endDate = reader.GetDateTime("EndDate");
             this.eventName = reader.GetString("eventName");
+
         }
 
         public string getMySQLColumns()
@@ -43,7 +44,7 @@ namespace PhotoApp
 
         public string getMySQLValues()
         {
-            string timeFormat = "yyyy-mm-dd HH:mm:ss";
+            string timeFormat = "yyyy-MM-dd HH:mm:ss";
             return @$"'{this.id_account}','{this.eventCode}','{this.startDate.ToString(timeFormat)}','{this.endDate.ToString(timeFormat)}','{this.eventName}'";
         }
 
