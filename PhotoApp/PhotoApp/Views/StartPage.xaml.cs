@@ -12,7 +12,7 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : ContentPage
     {
-
+        private User user = null;
         private Event item = null;
         public StartPage()
         {
@@ -33,9 +33,8 @@ namespace PhotoApp
             {
                 if (!this.item.HasEventExpired() && !this.item.HasEventBegun())
                 {
-                    App.Current.MainPage = new CameraPage(item);
-                }
-                
+                    App.Current.MainPage = new EventGallery(user, item);
+                }                
             }
             else
             {

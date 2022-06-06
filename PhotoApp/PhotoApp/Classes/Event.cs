@@ -56,7 +56,7 @@ namespace PhotoApp
         {
             return DateTime.Now.CompareTo(this.startDate) > 0;
         }
-        public bool IsEventUngoing()
+        public bool IsEventOngoing()
         {
             return DateTime.Now.CompareTo(this.endDate) > 0 && DateTime.Now.CompareTo(this.startDate) < 0;
         }

@@ -40,7 +40,7 @@ namespace PhotoApp
             {
                 lblEventStatus.Text = "This event has not yet begun";
             }
-            else if (this.item.IsEventUngoing())
+            else if (this.item.IsEventOngoing())
             {
                 lblEventStatus.Text = "This event is ongoing";
             }
