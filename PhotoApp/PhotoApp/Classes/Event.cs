@@ -50,22 +50,35 @@ namespace PhotoApp
 
         public bool HasEventExpired()
         {
-            return DateTime.Now.CompareTo(this.endDate) <= 0;
+            return DateTime.Now.CompareTo(this.endDate) < 0;
         }
-
+        public bool HasEventBegun()
+        {
+            return DateTime.Now.CompareTo(this.startDate) > 0;
+        }
+        public bool IsEventUngoing()
+        {
+            return DateTime.Now.CompareTo(this.endDate) > 0 && DateTime.Now.CompareTo(this.startDate) < 0;
+        }
         public string getName()
         {
             return this.eventName;
         }
-
         public ulong getId()
         { 
             return this.id;
         }
-
         public ulong GetEventCode()
         {
             return this.eventCode;
+        }
+        public DateTime getStartDate()
+        {
+            return this.startDate;
+        }
+        public DateTime getEndDate()
+        {
+            return this.endDate;
         }
     }
 }

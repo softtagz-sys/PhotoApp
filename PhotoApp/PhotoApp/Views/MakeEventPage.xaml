@@ -8,11 +8,11 @@
         <Label VerticalOptions="Start" Text="Info:" FontSize="15" x:Name="lblInfo"/>
         <Entry Placeholder="Naam" x:Name="entryEventNaam"/>
 
-        <Label Text="Begin:" FontSize="15" x:Name="lblBegin"/>
-        <DatePicker x:Name="dtpBeginDatum" Format="D" DateSelected="dtpBeginDatum_DateSelected"/>
+        <Label Text="Begin:" FontSize="15" x:Name="lblBegin"/>        
+        <DatePicker x:Name="dtpBeginDatum" Format="D"/>
 
         <Label Text="Einde:" FontSize="15" x:Name="lblEinde"/>
-        <DatePicker x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D" DateSelected="dtpEindDatum_DateSelected"/>
+        <DatePicker x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D"/>
         
         <Label x:Name="lblCode" HorizontalOptions="Center" VerticalOptions="Center"/>
 

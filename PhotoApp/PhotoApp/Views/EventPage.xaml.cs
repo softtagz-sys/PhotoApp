@@ -29,8 +29,8 @@ namespace PhotoApp
                     Text = item.getName()
                 };
                
-                btn.Clicked += async delegate { 
-                    await Navigation.PushAsync(new NavigationPage(new EventGallery(this.user, item))); 
+                btn.Clicked += delegate { 
+                    App.Current.MainPage = new EventGallery(this.user, item); 
                 };
                 EventButtons.Children.Add(btn);
             }
@@ -38,8 +38,8 @@ namespace PhotoApp
 
         void BtnMakeEvent_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushModalAsync(new NavigationPage(new MakeEventPage(this.user)));
             App.Current.MainPage = new MakeEventPage(user);
         }
+ 
     }
 }

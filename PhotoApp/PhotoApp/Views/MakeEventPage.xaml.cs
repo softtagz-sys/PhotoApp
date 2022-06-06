@@ -77,27 +77,5 @@ namespace PhotoApp
                 }
             }
         }
-
-
-
-        private void dtpBeginDatum_DateSelected(object sender, DateChangedEventArgs e)
-        {
-
-        }
-
-        private void tpBeginTijd_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-
-        }
-
-        private void dtpEindDatum_DateSelected(object sender, DateChangedEventArgs e)
-        {
-
-        }
-
-        private void tpEindTijd_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-
-        }
     }
 }

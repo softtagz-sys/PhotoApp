@@ -12,7 +12,8 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : ContentPage
     {
-        
+
+        private Event item = null;
         public StartPage()
         {
             InitializeComponent();
@@ -25,12 +26,16 @@ namespace PhotoApp
 
             if (eventID == "")
             {
-                await DisplayAlert("Alert", "Please provide a eventcode", "OK");
+                await DisplayAlert("Alert", "Please provide an eventcode", "OK");
                 return;
             }            
             if (db.isValidEvent(ulong.Parse(eventID)) )
             {
-                App.Current.MainPage = new CameraPage(item);
+                if (!this.item.HasEventExpired() && !this.item.HasEventBegun())
+                {
+                    App.Current.MainPage = new CameraPage(item);
+                }
+                
             }
             else
             {

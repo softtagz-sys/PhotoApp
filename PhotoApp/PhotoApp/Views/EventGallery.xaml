@@ -2,17 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoApp.EventGallery">
-    <ContentPage.Content>
-        
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="T..." x:Name="lblTitle" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-            <Label Text="s..." x:Name="lblStartDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
-            <Label Text="e..." x:Name="lblEndDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
-        </Frame>
-        
-        
-        <ScrollView Grid.Row="0">
-            <StackLayout x:Name="EventPhotos"/>
-        </ScrollView>
-    </ContentPage.Content>
+    <StackLayout>
+        <StackLayout BackgroundColor="#2196F3" Padding="24">
+            <Label Text="" x:Name="lblTitle" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="" x:Name="lblEventCode" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+            <Label Text="" x:Name="lblStartDate" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#2196F3" FontSize="16"/>
+            <Label Text="" x:Name="lblEndDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+        </StackLayout>
+        <Label Text="" x:Name="lblEventStatus" BackgroundColor="Gray"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
+                <StackLayout x:Name="EventButtons" HeightRequest="500"/>
+            </ScrollView>
+
+            <Button Grid.Row="0" Text="Neem een nieuwe foto" BorderColor="White" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#2196F3" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,20,22" VerticalOptions="End" Clicked="BtnTakePhoto_Clicked"/>
+
+        </Grid>
+    </StackLayout>
 </ContentPage>
