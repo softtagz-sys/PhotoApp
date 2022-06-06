@@ -20,7 +20,7 @@ namespace PhotoApp
 
         async void GoToCamera_OnClicked(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new CameraPage()));
+            await Navigation.PushModalAsync(new NavigationPage());
         }
         async void GoToEvent_OnClicked(object sender, EventArgs args)
         {

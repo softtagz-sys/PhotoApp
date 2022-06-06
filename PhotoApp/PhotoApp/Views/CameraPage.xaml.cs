@@ -16,14 +16,17 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CameraPage : ContentPage
     {
-        public CameraPage()
+        private Event item = null;
+        public CameraPage(object item)
         {
             InitializeComponent();
+            this.item = (Event)item;
+            lblEventTitel.Text = (this.item.getName()).ToString();
         }
         async void TakePhoto_Clicked(object sender, System.EventArgs e)
         {
             string fileName = Guid.NewGuid().ToString();
-            string eventName = "kobes_event2";
+            string eventName = (item.getId()).ToString();
             string remotePath = $"ftp://nasha.no-ip.org:5005/PhotoApp/{eventName}";
             string ftpUsername = "EventShootOutAppKey";
             string ftpPass = "n9thiK9mlg4we94lp9Ti";
@@ -39,7 +42,6 @@ namespace PhotoApp
             });
             if (file == null)
                 return;
-            await DisplayAlert("File Location", file.Path, "OK");
             image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();

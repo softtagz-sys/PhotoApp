@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Label
-        Text="Event Name"
+        x:Name="lblEventTitel"
         HorizontalTextAlignment="Center"
         FontSize="20"/>
         <Image

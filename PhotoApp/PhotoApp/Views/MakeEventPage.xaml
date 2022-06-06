@@ -9,14 +9,10 @@
         <Entry Placeholder="Naam" x:Name="entryEventNaam"/>
 
         <Label Text="Begin:" FontSize="15" x:Name="lblBegin"/>
-        <DatePicker x:Name="dtpBeginDatum" Format="D" DateSelected="dtpBeginDatum_DateSelected"/>        
-        <TimePicker x:Name="tpBeginTijd" Format="T" PropertyChanged="tpBeginTijd_PropertyChanged"/>
+        <DatePicker x:Name="dtpBeginDatum" Format="D" DateSelected="dtpBeginDatum_DateSelected"/>
 
         <Label Text="Einde:" FontSize="15" x:Name="lblEinde"/>
         <DatePicker x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D" DateSelected="dtpEindDatum_DateSelected"/>
-        <TimePicker x:Name="tpEindTijd" Format="T" PropertyChanged="tpEindTijd_PropertyChanged"/>
-
-        <Label Text="Code voor je event!" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center"/>
         
         <Label x:Name="lblCode" HorizontalOptions="Center" VerticalOptions="Center"/>
 

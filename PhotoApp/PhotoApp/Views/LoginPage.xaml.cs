@@ -35,10 +35,9 @@ namespace PhotoApp
             else
             {
                 await DisplayAlert("Alert", "Please provide username and password", "OK");
-            }
-            
+            }            
         }
-        async void btnLoginTest_Clicked(object sender, EventArgs e)
+        void btnLoginTest_Clicked(object sender, EventArgs e)
         {
             DBconnector db = new DBconnector();
             User user = db.getUserbyUsername("test@test.be", "test");
