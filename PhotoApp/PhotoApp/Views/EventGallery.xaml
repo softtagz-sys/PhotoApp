@@ -4,24 +4,24 @@
              x:Class="PhotoApp.EventGallery">
     <StackLayout>
         <StackLayout BackgroundColor="#2196F3" Padding="24">
-            <Label Text="" x:Name="lblTitle" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-            <Label Text="" x:Name="lblEventCode" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
-            <Label Text="" x:Name="lblStartDate" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#2196F3" FontSize="16"/>
-            <Label Text="" x:Name="lblEndDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+            <Label Text="" x:Name="lblTitle"        HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="" x:Name="lblEventCode"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+            <Label Text="" x:Name="lblStartDate"    HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#2196F3" FontSize="12"/>
+            <Label Text="" x:Name="lblEndDate"      HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
         </StackLayout>
+
         <Label Text="" x:Name="lblEventStatus" BackgroundColor="Gray"/>
+        
+        <ScrollView Grid.Row="0">
+            <StackLayout x:Name="imageListView" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="HotPink"></StackLayout>
+        </ScrollView>
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <ScrollView Grid.Row="0">
-                <StackLayout x:Name="EventButtons" HeightRequest="500"/>
-            </ScrollView>
-
             <Button Grid.Row="0" Text="Neem een nieuwe foto" BorderColor="White" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#2196F3" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,20,22" VerticalOptions="End" Clicked="BtnTakePhoto_Clicked"/>
-
         </Grid>
     </StackLayout>
 </ContentPage>
