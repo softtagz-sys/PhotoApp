@@ -28,7 +28,7 @@ namespace PhotoApp
                 await DisplayAlert("Alert", "Please provide a eventcode", "OK");
                 return;
             }            
-            if (db.isValidEvent(ulong.Parse(eventID)) && )
+            if (db.isValidEvent(ulong.Parse(eventID)) )
             {
                 App.Current.MainPage = new CameraPage(item);
             }
