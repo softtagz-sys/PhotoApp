@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoApp.EventGallery">
     <ContentPage.Content>
+        
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="T..." x:Name="lblTitle" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="s..." x:Name="lblStartDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+            <Label Text="e..." x:Name="lblEndDate" HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+        </Frame>
+        
+        
         <ScrollView Grid.Row="0">
             <StackLayout x:Name="EventPhotos"/>
         </ScrollView>

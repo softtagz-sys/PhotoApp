@@ -20,6 +20,12 @@ namespace PhotoApp
             this.user = (User)user;
             this.item = (Event)item;
 
+            await DisplayAlert("user", this.user.getEmail , "OK");
+            await DisplayAlert("event", this.item.getName , "OK");
+
+            lblTitle.Text = this.item.getName();
+            lblStartDate.text = this.item.getStartDate().toString("dd MMM YY");
+            lblEndDate.text = this.item.getEndDate().toString("dd MMM YY");
         }
     }
 }

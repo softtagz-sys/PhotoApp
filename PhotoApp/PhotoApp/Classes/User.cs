@@ -28,6 +28,10 @@ namespace PhotoApp
             this.isHost = (reader.GetInt32("IsHost") == 1 ? false : true);
         }
 
+        public string getEmail()
+        {
+            return this.email;
+        }
         public ulong getId()
         {
             return this.id;
@@ -36,7 +40,7 @@ namespace PhotoApp
         {
             this.password = password;
         }
-
+        
         public string getMySQLColumns()
         {
             return "email,password,IsHost";
