@@ -9,7 +9,7 @@ namespace PhotoApp
     internal class DBconnector
     {
         private static string host = "84.198.150.18";
-        // OpSchool: "10.23.0.228"
+        // School: "10.23.0.228"
         // Thuis: "84.198.150.18"
         private static string database = "fotoapp";
         private static string userDB = "fotoapp_usr";
@@ -103,6 +103,30 @@ namespace PhotoApp
             using var reader = command.ExecuteReader();
 
             return reader.RecordsAffected;
+        }
+
+        public Event getEventbyEventCode(ulong eventCode)
+        {
+            Event item = null;
+
+            connection.Open();
+
+            using var command = connection.CreateCommand();
+            command.CommandText = $"SELECT * FROM fotoapp.Event WHERE EventCode = '{eventCode}' LIMIT 1;";
+
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                item = new Event(reader);
+            }
+            connection.Close();
+
+            return item;
+        }
+        public bool isValidEvent(ulong eventCode)
+        {
+            Event e = this.getEventbyEventCode(eventCode);
+            return e != null;
         }
     }
 }

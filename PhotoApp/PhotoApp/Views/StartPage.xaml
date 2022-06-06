@@ -9,27 +9,27 @@
             </Frame>
 
             <Grid>
-                <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                </Grid.ColumnDefinitions>                
+                    <ColumnDefinition Width="6"/>
+                </Grid.ColumnDefinitions>
+                               
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="entryCode1" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+                <Entry Grid.Row="1" Grid.Column="2" x:Name="entryCode2" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+                <Entry Grid.Row="1" Grid.Column="3" x:Name="entryCode3" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+                <Entry Grid.Row="1" Grid.Column="4" x:Name="entryCode4" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+                <Entry Grid.Row="1" Grid.Column="5" x:Name="entryCode5" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
+                <Entry Grid.Row="1" Grid.Column="6" x:Name="entryCode6" MaxLength="1" Placeholder="0" Keyboard="Numeric"/>
             </Grid>
             
-            <Entry Grid.Row="0" Grid.Column="1" x:Name="entryCode1" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-            <Entry Grid.Row="0" Grid.Column="2" x:Name="entryCode2" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-            <Entry Grid.Row="0" Grid.Column="3" x:Name="entryCode3" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-            <Entry Grid.Row="0" Grid.Column="4" x:Name="entryCode4" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-            <Entry Grid.Row="0" Grid.Column="5" x:Name="entryCode5" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-            <Entry Grid.Row="0" Grid.Column="6" x:Name="entryCode6" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
             <Button x:Name="BtnConnectToEvent" Text="verbind met event" Clicked="BtnConnectToEvent_Clicked" />
 
             <Button x:Name="btnLogIn" Text="Aanmelden als host" Clicked="btnLogIn_OnClicked"/>
             <Label Text="of" FontSize="Small" HorizontalTextAlignment="Center"/>
             <Button x:Name="BtnRegistreren" Text="Maak een host account aan" Clicked="BtnRegister_OnClicked"/>
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

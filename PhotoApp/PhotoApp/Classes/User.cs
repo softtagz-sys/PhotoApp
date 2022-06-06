@@ -25,7 +25,7 @@ namespace PhotoApp
         {
             this.id = reader.GetUInt64("id_account");
             this.email = reader.GetString("email");
-            this.isHost = (reader.GetInt32("IsHost") == 0 ? false : true);
+            this.isHost = (reader.GetInt32("IsHost") == 1 ? false : true);
         }
 
         public ulong getId()

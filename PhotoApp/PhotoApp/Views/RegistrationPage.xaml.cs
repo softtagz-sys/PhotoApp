@@ -33,6 +33,8 @@ namespace PhotoApp
                         );
                     u.setPassword(EntryPassword.Text);
                     int r = db.createUser(u);
+
+                    App.Current.MainPage = new StartPage();
                 }    
             }
             catch (Exception)

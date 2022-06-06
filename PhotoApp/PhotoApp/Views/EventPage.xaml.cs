@@ -36,7 +36,7 @@ namespace PhotoApp
             }
         }
 
-        async void BtnMakeEvent_Clicked(object sender, EventArgs e)
+        void BtnMakeEvent_Clicked(object sender, EventArgs e)
         {
             //await Navigation.PushModalAsync(new NavigationPage(new MakeEventPage(this.user)));
             App.Current.MainPage = new MakeEventPage(user);
