@@ -48,6 +48,11 @@ namespace PhotoApp
             return @$"'{this.id_account}','{this.eventCode}','{this.startDate.ToString(timeFormat)}','{this.endDate.ToString(timeFormat)}','{this.eventName}'";
         }
 
+        public bool HasEventExpired()
+        {
+            return DateTime.Now.CompareTo(this.endDate) <= 0;
+        }
+
         public string getName()
         {
             return this.eventName;
@@ -56,6 +61,11 @@ namespace PhotoApp
         public ulong getId()
         { 
             return this.id;
+        }
+
+        public ulong GetEventCode()
+        {
+            return this.eventCode;
         }
     }
 }

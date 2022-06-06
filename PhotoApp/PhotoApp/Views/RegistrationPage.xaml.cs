@@ -17,7 +17,7 @@ namespace PhotoApp
             InitializeComponent();
         }
 
-        void btnRegister_CLicked(object sender, EventArgs e)
+        async void btnRegister_CLicked(object sender, EventArgs e)
         {
             try
             {
@@ -34,6 +34,7 @@ namespace PhotoApp
                     u.setPassword(EntryPassword.Text);
                     int r = db.createUser(u);
 
+                    await DisplayAlert("Alert", "You're account has been created", "OK");
                     App.Current.MainPage = new StartPage();
                 }    
             }

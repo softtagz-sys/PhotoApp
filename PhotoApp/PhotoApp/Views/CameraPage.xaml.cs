@@ -26,7 +26,7 @@ namespace PhotoApp
         async void TakePhoto_Clicked(object sender, System.EventArgs e)
         {
             string fileName = Guid.NewGuid().ToString();
-            string eventName = (item.getId()).ToString();
+            string eventName = (item.GetEventCode()).ToString();
             string remotePath = $"ftp://nasha.no-ip.org:5005/PhotoApp/{eventName}";
             string ftpUsername = "EventShootOutAppKey";
             string ftpPass = "n9thiK9mlg4we94lp9Ti";

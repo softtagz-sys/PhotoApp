@@ -21,7 +21,7 @@ namespace PhotoApp
             this.user = (User)user;
         }
 
-        private void btnEventMaken_Clicked(object sender, EventArgs e)
+        private async void btnEventMaken_Clicked(object sender, EventArgs e)
         {
             Random rndCode = new Random();
             ulong strCode = (ulong)rndCode.Next(0, 1000000);
@@ -34,6 +34,7 @@ namespace PhotoApp
             this.createDBEvent(strCode, startDate, endDate, eventName);
             this.createFTPEvent(strCode.ToString("D3"));
 
+            await DisplayAlert("Alert", "You're event has been created", "OK");
             App.Current.MainPage = new EventPage(user);
         }
 

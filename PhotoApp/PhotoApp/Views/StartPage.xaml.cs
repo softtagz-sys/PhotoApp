@@ -20,18 +20,16 @@ namespace PhotoApp
         async void BtnConnectToEvent_Clicked(object sender, EventArgs e)
         {
             string eventID = entryCode1.Text + entryCode2.Text + entryCode3.Text + entryCode4.Text + entryCode5.Text + entryCode6.Text;
+            DBconnector db = new DBconnector();
+            Event item = db.getEventbyEventCode(ulong.Parse(eventID));
 
             if (eventID == "")
             {
                 await DisplayAlert("Alert", "Please provide a eventcode", "OK");
                 return;
-            }
-
-            DBconnector db = new DBconnector();
-
-            if (db.isValidEvent(ulong.Parse(eventID)))
+            }            
+            if (db.isValidEvent(ulong.Parse(eventID)) && )
             {
-                Event item = db.getEventbyEventCode(ulong.Parse(eventID));
                 App.Current.MainPage = new CameraPage(item);
             }
             else
