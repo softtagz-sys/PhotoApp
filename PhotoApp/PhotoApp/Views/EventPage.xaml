@@ -14,7 +14,7 @@
 
         <Button 
             Grid.Row="0" 
-            Text="Maak Event" 
+            Text="Make new event" 
             BorderColor="White" 
             BorderWidth="1" 
             FontAttributes="Bold" 

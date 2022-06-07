@@ -12,7 +12,7 @@ namespace PhotoApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : ContentPage
     {
-        private User user = null;
+        private User user = new User((ulong)0, "dummy", false);
         private Event item = null;
         public StartPage()
         {
@@ -22,30 +22,27 @@ namespace PhotoApp
         {
             string eventID = entryCode1.Text + entryCode2.Text + entryCode3.Text + entryCode4.Text + entryCode5.Text + entryCode6.Text;
             DBconnector db = new DBconnector();
-            Event item = db.getEventbyEventCode(ulong.Parse(eventID));
+            item = db.getEventbyEventCode(ulong.Parse(eventID));
 
             if (eventID == "")
             {
                 await DisplayAlert("Alert", "Please provide an eventcode", "OK");
                 return;
             }            
-            if (db.isValidEvent(ulong.Parse(eventID)) )
+            if (db.isValidEvent(ulong.Parse(eventID)))
             {
-                if (!this.item.HasEventExpired() && !this.item.HasEventBegun())
-                {
-                    App.Current.MainPage = new EventGallery(user, item);
-                }                
+                App.Current.MainPage = new EventGallery(this.user, this.item);
             }
             else
             {
                 await DisplayAlert("Alert", "incorrect event details", "OK");
             }
         }
-        void btnLogIn_OnClicked(object sender, EventArgs e)
+        void btnLogIn_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new LoginPage();
         }
-        void BtnRegister_OnClicked(object sender, EventArgs e)
+        void BtnRegister_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new RegistrationPage();
         }

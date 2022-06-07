@@ -28,21 +28,21 @@ namespace PhotoApp
 
             lblTitle.Text = this.item.getName();
 
-            //lblEventCode.Text = Convert.ToString(this.item.GetEventCode());
+            lblEventCode.Text = Convert.ToString(this.item.GetEventCode());
             lblStartDate.Text = "StartDate: " + Convert.ToString(this.item.getStartDate());
             lblEndDate.Text = "EndDate " +  Convert.ToString(this.item.getEndDate());
 
             if (this.item.HasEventExpired())
             {
-                //lblEventStatus.Text = "This event has expired";
+                lblEventStatus.Text = "This event has expired";
             }
             else if (this.item.HasEventBegun())
             {
-                //lblEventStatus.Text = "This event has not yet begun";
+                lblEventStatus.Text = "This event has not yet begun";
             }
             else if (this.item.IsEventOngoing())
             {
-                //lblEventStatus.Text = "This event is ungoing";
+                lblEventStatus.Text = "This event is ungoing";
             }
 
             this.loadEventPictures();
@@ -55,7 +55,7 @@ namespace PhotoApp
             
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
-                await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
+                await DisplayAlert("No Camera", "No camera avaialble.", "OK");
                 return;
             }
             MediaFile file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions

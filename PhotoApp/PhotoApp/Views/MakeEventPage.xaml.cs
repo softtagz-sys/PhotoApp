@@ -21,13 +21,13 @@ namespace PhotoApp
             this.user = (User)user;
         }
 
-        private async void btnEventMaken_Clicked(object sender, EventArgs e)
+        private async void btnMakeEvent_Clicked(object sender, EventArgs e)
         {
             Random rndCode = new Random();
             ulong strCode = (ulong)rndCode.Next(0, 1000000);
-            string eventName = entryEventNaam.Text;
-            DateTime startDate = dtpBeginDatum.Date;
-            DateTime endDate = dtpEindDatum.Date;
+            string eventName = entryEventName.Text;
+            DateTime startDate = dtpStarDate.Date;
+            DateTime endDate = dtpEndDate.Date;
 
             //TODO missing time component
 

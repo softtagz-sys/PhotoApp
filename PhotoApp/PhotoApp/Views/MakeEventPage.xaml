@@ -2,21 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoApp.MakeEventPage"
-             Title="Maak een nieuw event aan">
+             Title="Make a new event">
     <StackLayout Margin="10">
 
         <Label VerticalOptions="Start" Text="Info:" FontSize="15" x:Name="lblInfo"/>
-        <Entry Placeholder="Naam" x:Name="entryEventNaam"/>
+        <Entry Placeholder="Name of event" x:Name="entryEventName"/>
 
-        <Label Text="Begin:" FontSize="15" x:Name="lblBegin"/>        
-        <DatePicker x:Name="dtpBeginDatum" Format="D"/>
+        <Label Text="Startdate:" FontSize="15"/>        
+        <DatePicker x:Name="dtpStarDate" Format="D"/>
 
-        <Label Text="Einde:" FontSize="15" x:Name="lblEinde"/>
-        <DatePicker x:Name="dtpEindDatum" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D"/>
+        <Label Text="Enddate:" FontSize="15" x:Name="lblStart"/>
+        <DatePicker x:Name="dtpEndDate" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D"/>
         
         <Label x:Name="lblCode" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-        <Button Text="Maak event aan" x:Name="btnEventMaken" Clicked="btnEventMaken_Clicked"/>
+        <Button Text="Make event" x:Name="btnMakeEvent" Clicked="btnMakeEvent_Clicked"/>
         
     </StackLayout>
 </ContentPage>

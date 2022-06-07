@@ -1,34 +1,155 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PhotoApp.StartPage">
+             xmlns:effects="clr-namespace:PhotoApp.Effects"
+             xmlns:helpers="clr-namespace:PhotoApp.Helpers;assembly=PhotoApp"
+             x:Class="PhotoApp.StartPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="Welcome to our photo app" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <StackLayout BackgroundColor="#F0F0F0">
+
+            <Frame  
+                CornerRadius="0" 
+                BackgroundColor="#F0F0F0"
+                VerticalOptions="StartAndExpand">
+                
+                <Image 
+                    Source="{helpers:ImageResource PhotoApp.Assets.Images.Logo_PhotoApp_Black.png}"
+                    HeightRequest="100"
+                    WidthRequest="00"
+                    Margin="5,5,5,5"/>
             </Frame>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="6"/>
-                </Grid.ColumnDefinitions>
-                               
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="entryCode1" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-                <Entry Grid.Row="1" Grid.Column="2" x:Name="entryCode2" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-                <Entry Grid.Row="1" Grid.Column="3" x:Name="entryCode3" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-                <Entry Grid.Row="1" Grid.Column="4" x:Name="entryCode4" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-                <Entry Grid.Row="1" Grid.Column="5" x:Name="entryCode5" MaxLength="1" Placeholder="0" Keyboard="Numeric" ReturnType="Next"/>
-                <Entry Grid.Row="1" Grid.Column="6" x:Name="entryCode6" MaxLength="1" Placeholder="0" Keyboard="Numeric"/>
-            </Grid>
-            
-            <Button x:Name="BtnConnectToEvent" Text="verbind met event" Clicked="BtnConnectToEvent_Clicked" />
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Grid
+                    VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6"/>
+                    </Grid.ColumnDefinitions>
 
-            <Button x:Name="btnLogIn" Text="Aanmelden als host" Clicked="btnLogIn_OnClicked"/>
-            <Label Text="of" FontSize="Small" HorizontalTextAlignment="Center"/>
-            <Button x:Name="BtnRegistreren" Text="Maak een host account aan" Clicked="BtnRegister_OnClicked"/>
+                    <!--#region Code entries-->
+                    <Frame
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    CornerRadius="10"
+                    Padding="10,0">
+                        <Entry
+                        x:Name="entryCode1" 
+                        MaxLength="1" 
+                        Placeholder="0" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next">
+                            <Entry.Effects>
+                                <effects:PlainEntry/>
+                            </Entry.Effects>
+                        </Entry>
+                    </Frame>
+                    <Frame
+                    Grid.Row="1" 
+                    Grid.Column="2"
+                    CornerRadius="10"
+                    Padding="10,0">
+                        <Entry
+                        x:Name="entryCode2" 
+                        MaxLength="1" 
+                        Placeholder="0" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next">
+                            <Entry.Effects>
+                                <effects:PlainEntry/>
+                            </Entry.Effects>
+                        </Entry>
+                    </Frame>
+                    <Frame
+                    Grid.Row="1" 
+                    Grid.Column="3"
+                    CornerRadius="10"
+                    Padding="10,0">
+                        <Entry
+                        x:Name="entryCode3" 
+                        MaxLength="1" 
+                        Placeholder="0" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next">
+                            <Entry.Effects>
+                                <effects:PlainEntry/>
+                            </Entry.Effects>
+                        </Entry>
+                    </Frame>
+                    <Frame
+                    Grid.Row="1" 
+                    Grid.Column="4"
+                    CornerRadius="10"
+                    Padding="10,0">
+                        <Entry
+                        x:Name="entryCode4" 
+                        MaxLength="1" 
+                        Placeholder="0" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next">
+                            <Entry.Effects>
+                                <effects:PlainEntry/>
+                            </Entry.Effects>
+                        </Entry>
+                    </Frame>
+                    <Frame
+                    Grid.Row="1" 
+                    Grid.Column="5"
+                    CornerRadius="10"
+                    Padding="10,0">
+                        <Entry
+                        x:Name="entryCode5" 
+                        MaxLength="1" 
+                        Placeholder="0" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next">
+                            <Entry.Effects>
+                                <effects:PlainEntry/>
+                            </Entry.Effects>
+                        </Entry>
+                    </Frame>
+                    <Frame
+                    Grid.Row="1" 
+                    Grid.Column="6"
+                    CornerRadius="10"
+                    Padding="10,0">
+                        <Entry
+                        x:Name="entryCode6" 
+                        MaxLength="1" 
+                        Placeholder="0" 
+                        Keyboard="Numeric" 
+                        ReturnType="Next">
+                            <Entry.Effects>
+                                <effects:PlainEntry/>
+                            </Entry.Effects>
+                        </Entry>
+                    </Frame>
+                    <!--#endregion-->
+                    
+                </Grid>
+
+                <Button 
+                    x:Name="BtnConnectToEvent" 
+                    Text="Connect to event" 
+                    Margin="0,20,0,0"
+                    Clicked="BtnConnectToEvent_Clicked" 
+                    Style="{StaticResource buttonStyle}"/>
+            </StackLayout>
+
+            <Label 
+                Text="Or create your own as a host:" 
+                FontSize="Medium" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="Center"/>
+
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Button x:Name="btnLogIn" Text="Login" Clicked="btnLogIn_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Label Text="or" FontSize="Small" HorizontalTextAlignment="Center"/>
+                <Button x:Name="BtnRegister" Text="Register" Clicked="BtnRegister_Clicked" Style="{StaticResource buttonStyle}"/>
+            </StackLayout>
             
         </StackLayout>
     </ContentPage.Content>
