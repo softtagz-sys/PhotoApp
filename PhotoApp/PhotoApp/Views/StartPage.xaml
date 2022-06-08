@@ -11,18 +11,26 @@
             <Frame  
                 CornerRadius="0" 
                 BackgroundColor="#F0F0F0"
-                VerticalOptions="StartAndExpand">
+                VerticalOptions="StartAndExpand"
+                BorderColor="Purple">
                 
                 <Image 
                     Source="{helpers:ImageResource PhotoApp.Assets.Images.Logo_PhotoApp_Black.png}"
                     HeightRequest="100"
                     WidthRequest="00"
-                    Margin="5,5,5,5"/>
+                    Margin="5"/>
             </Frame>
-
+            
+            <StackLayout VerticalOptions="End">
+                <Label 
+                Text="Please enter your eventcode:" 
+                FontSize="Medium" 
+                HorizontalTextAlignment="Center" 
+                VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+            
             <StackLayout VerticalOptions="StartAndExpand">
-                <Grid
-                    VerticalOptions="StartAndExpand">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
