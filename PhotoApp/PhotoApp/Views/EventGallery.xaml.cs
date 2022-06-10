@@ -66,6 +66,7 @@ namespace PhotoApp
             });
 
             ftp.uploadFile(file, eventCode, fileName);
+            App.Current.MainPage = new EventGallery(this.user, this.item);
         }
 
         private void loadEventPictures()
