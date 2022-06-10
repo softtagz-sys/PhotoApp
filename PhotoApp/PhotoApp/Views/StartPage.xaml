@@ -7,11 +7,10 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F0F0F0">
-
             <Frame  
                 CornerRadius="0" 
                 BackgroundColor="#F0F0F0"
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="Start"
                 BorderColor="Purple">
                 
                 <Image 
@@ -21,15 +20,9 @@
                     Margin="5"/>
             </Frame>
             
-            <StackLayout VerticalOptions="End">
-                <Label 
-                Text="Please enter your eventcode:" 
-                FontSize="Medium" 
-                HorizontalTextAlignment="Center" 
-                VerticalOptions="StartAndExpand"/>
-            </StackLayout>
-            
-            <StackLayout VerticalOptions="StartAndExpand">
+            <StackLayout 
+                VerticalOptions="Start"
+                Margin="0,20,0,0">                
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -37,17 +30,27 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="6"/>
                     </Grid.ColumnDefinitions>
-
+                    <Label                         
+                        Grid.Row="0"
+                        Grid.ColumnSpan="7"
+                        Text="Please enter your eventcode:" 
+                        TextColor="Black"
+                        FontSize="Medium" 
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        Margin="0,10,0,0"/>
                     <!--#region Code entries-->
                     <Frame
-                    Grid.Row="1" 
-                    Grid.Column="1"
-                    CornerRadius="10"
-                    Padding="10,0">
+                        Grid.Row="1" 
+                        Grid.Column="1"
+                        CornerRadius="10"
+                        Padding="10,0">
                         <Entry
-                        x:Name="entryCode1" 
+                        x:Name="entryCode1"
                         MaxLength="1" 
                         Placeholder="0" 
+                        PlaceholderColor="Black"
                         Keyboard="Numeric" 
                         ReturnType="Next">
                             <Entry.Effects>
@@ -56,80 +59,85 @@
                         </Entry>
                     </Frame>
                     <Frame
-                    Grid.Row="1" 
-                    Grid.Column="2"
-                    CornerRadius="10"
-                    Padding="10,0">
+                        Grid.Row="1" 
+                        Grid.Column="2"
+                        CornerRadius="10"
+                        Padding="10,0">
                         <Entry
-                        x:Name="entryCode2" 
-                        MaxLength="1" 
-                        Placeholder="0" 
-                        Keyboard="Numeric" 
-                        ReturnType="Next">
+                            x:Name="entryCode2" 
+                            MaxLength="1" 
+                            Placeholder="0" 
+                            PlaceholderColor="Black"
+                            Keyboard="Numeric" 
+                            ReturnType="Next">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
                         </Entry>
                     </Frame>
                     <Frame
-                    Grid.Row="1" 
-                    Grid.Column="3"
-                    CornerRadius="10"
-                    Padding="10,0">
+                        Grid.Row="1" 
+                        Grid.Column="3"
+                        CornerRadius="10"
+                        Padding="10,0">
                         <Entry
-                        x:Name="entryCode3" 
-                        MaxLength="1" 
-                        Placeholder="0" 
-                        Keyboard="Numeric" 
-                        ReturnType="Next">
+                            x:Name="entryCode3" 
+                            MaxLength="1" 
+                            Placeholder="0" 
+                            PlaceholderColor="Black"
+                            Keyboard="Numeric" 
+                            ReturnType="Next">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
                         </Entry>
                     </Frame>
                     <Frame
-                    Grid.Row="1" 
-                    Grid.Column="4"
-                    CornerRadius="10"
-                    Padding="10,0">
+                        Grid.Row="1" 
+                        Grid.Column="4"
+                        CornerRadius="10"
+                        Padding="10,0">
                         <Entry
-                        x:Name="entryCode4" 
-                        MaxLength="1" 
-                        Placeholder="0" 
-                        Keyboard="Numeric" 
-                        ReturnType="Next">
+                            x:Name="entryCode4" 
+                            MaxLength="1" 
+                            Placeholder="0" 
+                            PlaceholderColor="Black"
+                            Keyboard="Numeric" 
+                            ReturnType="Next">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
                         </Entry>
                     </Frame>
                     <Frame
-                    Grid.Row="1" 
-                    Grid.Column="5"
-                    CornerRadius="10"
-                    Padding="10,0">
+                        Grid.Row="1" 
+                        Grid.Column="5"
+                        CornerRadius="10"
+                        Padding="10,0">
                         <Entry
-                        x:Name="entryCode5" 
-                        MaxLength="1" 
-                        Placeholder="0" 
-                        Keyboard="Numeric" 
-                        ReturnType="Next">
+                            x:Name="entryCode5" 
+                            MaxLength="1" 
+                            Placeholder="0" 
+                            PlaceholderColor="Black"
+                            Keyboard="Numeric" 
+                            ReturnType="Next">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
                         </Entry>
                     </Frame>
                     <Frame
-                    Grid.Row="1" 
-                    Grid.Column="6"
-                    CornerRadius="10"
-                    Padding="10,0">
+                        Grid.Row="1" 
+                        Grid.Column="6"
+                        CornerRadius="10"
+                        Padding="10,0">
                         <Entry
-                        x:Name="entryCode6" 
-                        MaxLength="1" 
-                        Placeholder="0" 
-                        Keyboard="Numeric" 
-                        ReturnType="Next">
+                            x:Name="entryCode6" 
+                            MaxLength="1" 
+                            Placeholder="0" 
+                            PlaceholderColor="Black"
+                            Keyboard="Numeric" 
+                            ReturnType="Next">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
@@ -148,17 +156,18 @@
             </StackLayout>
 
             <Label 
-                Text="Or create your own as a host:" 
+                Text="Or create your own as a host:"
+                TextColor="Black"
                 FontSize="Medium" 
                 HorizontalTextAlignment="Center" 
-                VerticalOptions="Center"/>
+                VerticalOptions="Center"
+                Margin="0,50,0,10"/>
 
             <StackLayout VerticalOptions="StartAndExpand">
                 <Button x:Name="btnLogIn" Text="Login" Clicked="btnLogIn_Clicked" Style="{StaticResource buttonStyle}"/>
-                <Label Text="or" FontSize="Small" HorizontalTextAlignment="Center"/>
+                <Label Text="or" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center"/>
                 <Button x:Name="BtnRegister" Text="Register" Clicked="BtnRegister_Clicked" Style="{StaticResource buttonStyle}"/>
             </StackLayout>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

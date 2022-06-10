@@ -20,13 +20,16 @@ namespace PhotoApp
             DBconnector db = new DBconnector();
             List<Event> events = db.listEventsForUser(this.user);
 
-
             EventButtons.Children.Clear();
             foreach (Event item in events)
             {
                 var btn = new Button()
                 {
-                    Text = item.getName()
+                    Text = item.getName(),
+                    Style = (Style)Application.Current.Resources["buttonStyle"],
+                    VerticalOptions = LayoutOptions.Center,
+                    Margin = new Thickness(0),
+                    WidthRequest = 400,
                 };
                
                 btn.Clicked += delegate { 

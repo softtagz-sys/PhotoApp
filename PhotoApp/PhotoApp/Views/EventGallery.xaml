@@ -3,26 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoApp.EventGallery">
     <StackLayout>
-        
-        <StackLayout BackgroundColor="#2196F3" Padding="24">
+
+        <StackLayout BackgroundColor="#212121" Padding="20">
             <Label Text="" x:Name="lblTitle"        HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             <Label Text="" x:Name="lblEventCode"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
-            <Label Text="" x:Name="lblStartDate"    HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="#2196F3" FontSize="12"/>
+            <Label Text="" x:Name="lblStartDate"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
             <Label Text="" x:Name="lblEndDate"      HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
         </StackLayout>
 
         <Label Text="" x:Name="lblEventStatus" BackgroundColor="Gray"/>
-        
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button Grid.Row="0" Text="Take a new photo" BorderColor="White" BorderWidth="1" FontAttributes="Bold" BackgroundColor="#2196F3" BorderRadius="35" TextColor="White" HorizontalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,20,22" VerticalOptions="End" Clicked="BtnTakePhoto_Clicked"/>
-
-            <ScrollView Grid.Row="0">
-                <StackLayout x:Name="imageListView" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="HotPink"></StackLayout>
+            <ScrollView VerticalOptions="StartAndExpand" Grid.Row="0">
+                <StackLayout x:Name="imageListView"/>
             </ScrollView>
+
+            <Button
+                x:Name="btnTakePhoto"
+                IsVisible="false"
+                Grid.Row="0"
+                Text="Take a new photo" 
+                BorderColor="Transparent" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#212121" 
+                BorderRadius="35" 
+                TextColor="White" 
+                HorizontalOptions="End" 
+                VerticalOptions="End" 
+                WidthRequest="160" 
+                HeightRequest="70" 
+                Margin="0,0,20,22" 
+                Clicked="BtnTakePhoto_Clicked"/>
         </Grid>
+
+        
+         
     </StackLayout>
 </ContentPage>

@@ -12,7 +12,7 @@
         <DatePicker x:Name="dtpStarDate" Format="D"/>
 
         <Label Text="Enddate:" FontSize="15" x:Name="lblStart"/>
-        <DatePicker x:Name="dtpEndDate" MinimumDate="{Binding Source={x:Reference dtpEindDatum}, Path=Date}" Format="D"/>
+        <DatePicker x:Name="dtpEndDate" MinimumDate="{Binding Source={x:Reference dtpEndDate}, Path=Date}" Format="D"/>
         
         <Label x:Name="lblCode" HorizontalOptions="Center" VerticalOptions="Center"/>
 

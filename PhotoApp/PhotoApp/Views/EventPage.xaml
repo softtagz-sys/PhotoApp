@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoApp.EventPage"
              Title="Jouw events">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
 
-        <ScrollView Grid.Row="0">
+    <StackLayout>
+        <Frame BackgroundColor="#212121" Padding="20" CornerRadius="0">
+            <Label Text="your events" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <ScrollView VerticalOptions="StartAndExpand">
             <StackLayout x:Name="EventButtons"/>
         </ScrollView>
 
@@ -18,12 +18,13 @@
             BorderColor="White" 
             BorderWidth="1" 
             FontAttributes="Bold" 
-            BackgroundColor="#2196F3" 
+            BackgroundColor="#212121" 
             BorderRadius="35" TextColor="White" 
-            HorizontalOptions="End" WidthRequest="160" 
-            HeightRequest="70" Margin="0,0,20,22" 
+            HorizontalOptions="End" 
             VerticalOptions="End" 
+            WidthRequest="160" 
+            HeightRequest="70" 
+            Margin="0,0,20,22" 
             Clicked="BtnMakeEvent_Clicked"/>
-
-    </Grid>
+    </StackLayout>
 </ContentPage>

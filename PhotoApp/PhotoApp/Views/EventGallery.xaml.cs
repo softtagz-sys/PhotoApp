@@ -38,11 +38,12 @@ namespace PhotoApp
             }
             else if (this.item.HasEventBegun())
             {
-                lblEventStatus.Text = "This event has not yet begun";
+                lblEventStatus.Text = "This event has not yet begun";                
             }
             else if (this.item.IsEventOngoing())
             {
-                lblEventStatus.Text = "This event is ungoing";
+                lblEventStatus.Text = "This event is ongoing";
+                btnTakePhoto.IsVisible = true;
             }
 
             this.loadEventPictures();
