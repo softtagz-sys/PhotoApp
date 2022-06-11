@@ -5,14 +5,40 @@
              Title="Jouw events">
 
     <StackLayout>
-        <Frame BackgroundColor="#212121" Padding="20" CornerRadius="0">
-            <Label Text="your events" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
-        </Frame>
-        <ScrollView VerticalOptions="StartAndExpand">
-            <StackLayout x:Name="EventButtons"/>
-        </ScrollView>
 
-        <Button 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Frame BackgroundColor="#212121" Padding="20" CornerRadius="0" Grid.Row="0">
+                <Label Text="your events" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            </Frame>
+            <Button 
+                Grid.Row="0" 
+                Text="Logout" 
+                BorderColor="#212121" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#212121"
+                TextColor="White" 
+                HorizontalOptions="Start" 
+                VerticalOptions="CenterAndExpand" 
+                WidthRequest="80"
+                Clicked="BtnLogOut_Clicked"/>
+        </Grid>
+        
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ScrollView VerticalOptions="StartAndExpand" Grid.Row="0">
+                <StackLayout x:Name="EventButtons"/>
+            </ScrollView>
+
+            <Button 
             Grid.Row="0" 
             Text="Make new event" 
             BorderColor="White" 
@@ -26,5 +52,7 @@
             HeightRequest="70" 
             Margin="0,0,20,22" 
             Clicked="BtnMakeEvent_Clicked"/>
+        </Grid>
     </StackLayout>
+    
 </ContentPage>

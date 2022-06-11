@@ -43,6 +43,11 @@ namespace PhotoApp
         {
             App.Current.MainPage = new MakeEventPage(user);
         }
- 
+        
+        void BtnLogOut_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new StartPage();
+        }
+
     }
 }

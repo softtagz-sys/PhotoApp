@@ -87,5 +87,17 @@ namespace PhotoApp
             }
 
         }
+        void BtnBack_Clicked(object sender, EventArgs e)
+        {
+            if (this.user.getEmail() == "dummy")
+            {
+                App.Current.MainPage = new StartPage();
+            }
+            else
+            {
+                App.Current.MainPage = new EventPage(this.user);
+            }
+            
+        }
     }
 }

@@ -43,5 +43,10 @@ namespace PhotoApp
             User user = db.getUserbyUsername("test@test.be", "test");
             App.Current.MainPage = new EventPage(user);
         }
+        void BtnBack_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new StartPage();
+        }
+
     }
 }

@@ -4,13 +4,30 @@
              x:Class="PhotoApp.EventGallery">
     <StackLayout>
 
-        <StackLayout BackgroundColor="#212121" Padding="20">
-            <Label Text="" x:Name="lblTitle"        HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-            <Label Text="" x:Name="lblEventCode"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
-            <Label Text="" x:Name="lblStartDate"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
-            <Label Text="" x:Name="lblEndDate"      HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
-        </StackLayout>
-
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="#212121" Grid.Row="0" HeightRequest="600">
+                <Label Text="" x:Name="lblTitle"        HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="" x:Name="lblEventCode"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+                <Label Text="" x:Name="lblStartDate"    HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+                <Label Text="" x:Name="lblEndDate"      HorizontalTextAlignment="Center" TextColor="White" FontSize="12"/>
+            </StackLayout>
+            <Button 
+                Grid.Row="0" 
+                Text="back" 
+                BorderColor="#212121" 
+                BorderWidth="1" 
+                FontAttributes="Bold" 
+                BackgroundColor="#212121"
+                TextColor="White" 
+                HorizontalOptions="Start" 
+                VerticalOptions="CenterAndExpand" 
+                WidthRequest="80"
+                Clicked="BtnBack_Clicked"/>
+        </Grid>
         <Label Text="" x:Name="lblEventStatus" BackgroundColor="Gray"/>
 
         <Grid>

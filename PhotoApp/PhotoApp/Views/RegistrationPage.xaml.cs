@@ -44,5 +44,9 @@ namespace PhotoApp
                 throw;
             }
         }
+        void BtnBack_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new StartPage();
+        }
     }
 }

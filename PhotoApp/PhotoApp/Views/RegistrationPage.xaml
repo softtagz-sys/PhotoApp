@@ -6,9 +6,27 @@
     <ContentPage.Content>
         <ScrollView BackgroundColor="#F0F0F0">            
             <StackLayout>
-                <Frame BackgroundColor="Black" Padding="20" CornerRadius="0">
-                    <Label Text="Register" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
-                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Frame BackgroundColor="#212121" Padding="20" CornerRadius="0">
+                        <Label Text="Register" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+                    </Frame>
+                    <Button 
+                        Grid.Row="0" 
+                        Text="back" 
+                        BorderColor="#212121" 
+                        BorderWidth="1" 
+                        FontAttributes="Bold" 
+                        BackgroundColor="#212121"
+                        TextColor="White" 
+                        HorizontalOptions="Start" 
+                        VerticalOptions="CenterAndExpand" 
+                        WidthRequest="80"
+                        Clicked="BtnBack_Clicked"/>
+                </Grid>
                 <StackLayout>
                     <StackLayout
                         Margin="20,20,20,10">
