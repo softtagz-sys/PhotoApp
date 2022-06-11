@@ -4,7 +4,7 @@
              xmlns:effects="clr-namespace:PhotoApp.Effects"
              x:Class="PhotoApp.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#F0F0F0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -29,13 +29,15 @@
             <StackLayout>
                 <StackLayout
                     Margin="20,20,20,10">
-                    <Label Text="Email:"/>
+                    <Label Text="Email:" TextColor="Black"/>
                     <Frame
                         CornerRadius="10"
                         Padding="10,0">
                         <Entry Placeholder="Enter your email here" 
+                               PlaceholderColor="#BDBDBD"
                                x:Name="entryEmail"
-                               FontSize="16">
+                               FontSize="16"
+                               TextColor="Black">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
@@ -44,14 +46,16 @@
                 </StackLayout>
                 <StackLayout
                     Margin="20,10,20,30">
-                    <Label Text="Passwords:"/>
+                    <Label Text="Passwords:" TextColor="Black"/>
                     <Frame
                         CornerRadius="10"
                         Padding="10,0">
                         <Entry Placeholder="Enter your password here" 
+                               PlaceholderColor="#BDBDBD"
                                IsPassword="True" 
                                FontSize="16" 
-                               x:Name="entryPassword">
+                               x:Name="entryPassword"
+                               TextColor="Black">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>

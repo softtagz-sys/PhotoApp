@@ -47,12 +47,13 @@
                         CornerRadius="10"
                         Padding="10,0">
                         <Entry
-                        x:Name="entryCode1"
-                        MaxLength="1" 
-                        Placeholder="0" 
-                        PlaceholderColor="Black"
-                        Keyboard="Numeric" 
-                        ReturnType="Next">
+                            x:Name="entryCode1"
+                            MaxLength="1" 
+                            Placeholder="0" 
+                            PlaceholderColor="#BDBDBD"
+                            TextColor="Black"
+                            Keyboard="Numeric" 
+                            ReturnType="Next">
                             <Entry.Effects>
                                 <effects:PlainEntry/>
                             </Entry.Effects>
@@ -67,7 +68,8 @@
                             x:Name="entryCode2" 
                             MaxLength="1" 
                             Placeholder="0" 
-                            PlaceholderColor="Black"
+                            PlaceholderColor="#BDBDBD"
+                            TextColor="Black"
                             Keyboard="Numeric" 
                             ReturnType="Next">
                             <Entry.Effects>
@@ -84,7 +86,8 @@
                             x:Name="entryCode3" 
                             MaxLength="1" 
                             Placeholder="0" 
-                            PlaceholderColor="Black"
+                            PlaceholderColor="#BDBDBD"
+                            TextColor="Black"
                             Keyboard="Numeric" 
                             ReturnType="Next">
                             <Entry.Effects>
@@ -101,7 +104,8 @@
                             x:Name="entryCode4" 
                             MaxLength="1" 
                             Placeholder="0" 
-                            PlaceholderColor="Black"
+                            PlaceholderColor="#BDBDBD"
+                            TextColor="Black"
                             Keyboard="Numeric" 
                             ReturnType="Next">
                             <Entry.Effects>
@@ -118,7 +122,8 @@
                             x:Name="entryCode5" 
                             MaxLength="1" 
                             Placeholder="0" 
-                            PlaceholderColor="Black"
+                            PlaceholderColor="#BDBDBD"
+                            TextColor="Black"
                             Keyboard="Numeric" 
                             ReturnType="Next">
                             <Entry.Effects>
@@ -135,7 +140,8 @@
                             x:Name="entryCode6" 
                             MaxLength="1" 
                             Placeholder="0" 
-                            PlaceholderColor="Black"
+                            PlaceholderColor="#BDBDBD"
+                            TextColor="Black"
                             Keyboard="Numeric" 
                             ReturnType="Next">
                             <Entry.Effects>

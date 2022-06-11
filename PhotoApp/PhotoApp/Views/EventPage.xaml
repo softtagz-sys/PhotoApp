@@ -4,8 +4,7 @@
              x:Class="PhotoApp.EventPage"
              Title="Jouw events">
 
-    <StackLayout>
-
+    <StackLayout BackgroundColor="#F0F0F0">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -34,7 +33,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <ScrollView VerticalOptions="StartAndExpand" Grid.Row="0">
+            <ScrollView Grid.Row="0">
                 <StackLayout x:Name="EventButtons"/>
             </ScrollView>
 

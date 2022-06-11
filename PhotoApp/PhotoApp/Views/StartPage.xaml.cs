@@ -24,7 +24,7 @@ namespace PhotoApp
             DBconnector db = new DBconnector();
             item = db.getEventbyEventCode(ulong.Parse(eventID));
 
-            if (eventID == "")
+            if (eventID == null)
             {
                 await DisplayAlert("Alert", "Please provide an eventcode", "OK");
                 return;

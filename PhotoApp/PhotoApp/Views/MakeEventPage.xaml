@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoApp.MakeEventPage"
              Title="Make a new event">
-    <StackLayout Margin="10">
+    <StackLayout Margin="10" BackgroundColor="#F0F0F0">
+
+        <Frame BackgroundColor="#212121" Padding="20" CornerRadius="0" Grid.Row="0">
+            <Label Text="Make a new event" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
 
         <Label VerticalOptions="Start" Text="Info:" FontSize="15" x:Name="lblInfo"/>
         <Entry Placeholder="Name of event" x:Name="entryEventName"/>
