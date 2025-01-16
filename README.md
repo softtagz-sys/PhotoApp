@@ -4,6 +4,8 @@
 
 PhotoApp is a Xamarin-based mobile application developed as part of our General Integrated Project (GIP) during our 6th year at Sint Cordula in Schoten. The app was created in collaboration with SDM2003 and is designed to enhance parties, weddings, and other events by allowing attendees to collectively capture and share photos. The captured photos are stored on a central FTP server, creating a fun and memorable photo book for all guests at the end of the event.
 
+You can view a demo [Here](https://youtube.com/playlist?list=PLn1DbyhwWurBfP4ZZ9mqNDpZneX8DhwhJ&si=xkWlPAs4pkdHHwwy)
+
 ## Features
 
 - **Event Creation:** Users can create events for parties, weddings, and other gatherings.
